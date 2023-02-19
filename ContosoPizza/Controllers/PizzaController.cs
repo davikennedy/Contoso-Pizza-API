@@ -13,10 +13,9 @@ public class PizzaController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<List<Pizza>> GetAll() =>
-        PizzaService.GetAll();
+    public ActionResult<List<Pizza>> GetAll() => PizzaService.GetAll();
 
-    [HttpGet("{id?}")]
+    [HttpGet("{id}")]
     public ActionResult<Pizza> Get(int id)
     {
         var pizza = PizzaService.Get(id);
